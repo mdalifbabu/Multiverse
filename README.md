@@ -1,14 +1,14 @@
 # Multiverse
-Django small static project.
+*Django small static project.
 
-Home Page
+**Home Page**
 ![Home](/m1.PNG)
 
-Home Page
+**Calculator**
 ![Home](/m2.PNG)
 
-Home Page
+**Contact us**
 ![Home](/m3.PNG)
 
-Home Page
+**Text Replace**
 ![Home](/m4.PNG)
