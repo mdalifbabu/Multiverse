@@ -1,0 +1,21 @@
+{% extends 'first/base.html' %}
+{% block content %}
+
+<section class="container">
+    <ul id="services">
+        <li>
+            {% if flag is True %}
+                <h5>Password Requirment is not fulfill</h5>
+                &#9679; Your password should contains 1 uppercase, 1 lowercase, 1 numeric, 1 special, at least 8 character and first character should not numeric.
+            {% else %}
+                <h3>Successfully Send Your Deatails to Us...</h3>
+                As Like:<br>
+                Name: {{name}}<br>
+                Email: {{email}}<br>
+                Message: {{message}}<br>
+            {% endif %}
+        </li>
+    </ul>
+</section>
+
+{% endblock %}

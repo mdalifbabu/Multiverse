@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Affordable and professional web design">
+        <meta name="keywords" content="web design, affordable web design, professional web design">
+        <meta name="author" content="Alif">
+        <title>First Website | Multiverse</title>
+        <link rel="stylesheet" type="text/css" href= "{% static 'first/design.css' %}">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <a href="/"><h1><span class="highlight">Multiverse</span></h1></a>
+                </div>
+                <nav>
+                    <ul>
+                        {% if key in 'home' %}
+                            <li class="current"><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/calculator">Calculator</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/replace_text">Text Replace</a></li>
+
+                        {% elif key in 'about' %}
+                            <li><a href="/">Home</a></li>
+                            <li class="current"><a href="/about">About</a></li>
+                            <li><a href="/calculator">Calculator</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/replace_text">Text Replace</a></li>
+                        
+                        
+                        {% elif key in 'calculator' %}
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li class="current"><a href="/calculator">Calculator</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/replace_text">Text Replace</a></li>
+                        
+                        {% elif key in 'contact' %}
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/calculator">Calculator</a></li>
+                            <li class="current"><a href="/contact">Contact Us</a></li>
+                            <li><a href="/replace_text">Text Replace</a></li>
+                        
+                        {% elif key in 'replace_text' %}
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/calculator">Calculator</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li class="current"><a href="/replace_text">Text Replace</a></li>
+
+                        {% endif %}
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        {% block content %}
+        
+        {% endblock %}
+
+        <footer>
+            <h5>Copyright &copy; Alif</h5>
+        </footer>
+    </body>
+
+</html>
+{% load static %}
+
+

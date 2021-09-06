@@ -1,0 +1,39 @@
+{% extends 'first/base.html' %}
+{% block content %}
+
+<section class="container">
+    <ul id="services">
+        <li>
+            <h4>Replace each word of text file with suitable word...!</h4>
+            <div>
+                <span class="highlight" style="font-size: 20px;">Upload File Below:</span>
+                <form method="POST", enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <i>This word</i>
+                    <input type="text" class="dark" name="replaceable">
+                    <i>Replace with</i>
+                    <input type="text" class="dark" name="toreplace">
+                    <br>
+                    <input type="file" class="dark" name="document"><br>
+                    <button type="submit" class="button_1">Upload</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+
+    <ul id="services">
+        <li>
+            <h4>Uploaded File Below:</h4>
+            <div>
+                {% if url %}
+
+                    <a href="{{ url }}">{{ url }}</a>
+
+                {% endif %}
+            </div>
+        </li>
+    </ul>
+</section>
+
+{% endblock %}

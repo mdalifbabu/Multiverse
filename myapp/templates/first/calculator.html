@@ -1,0 +1,38 @@
+{% extends 'first/base.html' %}
+{% block content %}
+
+<section class="container">
+    <ul id="services">
+        <li>
+            <span style="text-align: center;">
+                <form action="calculate">
+                    {% csrf_token %}
+                    <p><input type="text" placeholder="Enter First Number" name="n1"></p>
+                    <p><input type="text" placeholder="Enter Second Number" name="n2"></p> 
+                    <p><select name="operator">
+                        <option value="sum">+</option>
+                        <option value="sub">-</option>
+                        <option value="mul">*</option>
+                        <option value="div">/</option>
+                    </select></p>
+                    <button type="submit" class="button_1">Calculate</button>
+                </form>
+            </span>
+        </li>
+    </ul>
+
+    <ul id="services">
+        <li>
+            <div>
+                {% if ans %}
+
+                    <h1>Answer: {{ ans }}</h1>
+
+                {% endif %}
+            </div>
+        </li>
+    </ul>
+
+</section>
+    
+{% endblock %}

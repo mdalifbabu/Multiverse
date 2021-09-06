@@ -1,0 +1,22 @@
+{% extends 'first/base.html' %}
+{% block content %}
+
+<section class="container">
+    <div id="showcase">
+        <h1 style="text-align: center;">
+            {% if k in 'sum' %}
+                Summation is {{res}}
+            {% elif k in 'sub' %}
+                Subtraction is {{res}}
+            {% elif k in 'mul' %}
+                Multiplication is {{res}}
+            {% elif k in 'div' %}
+                Division is {{res}}
+            {% endif %}
+        </h1>
+    </div>
+</section>
+    
+
+
+{% endblock %}

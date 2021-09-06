@@ -1,0 +1,22 @@
+{% extends 'first/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="container">
+    <ul id="services">
+        <li>
+            <h1>We are always active to help you....</h1>
+            
+            <form action="result">
+                <p>Name:     <input type="text" name="name"><br></p>
+                <p>Email:    <input type="email" name="email"><br></p>
+                <p>Password: <input type="password" name="pwd"><br></p>
+                Massage: <p><textarea name="message" rows="10" cols="30"></textarea></p>
+                <button type="submit" class="button_1">Send</button>
+            </form>
+        </li>
+    </ul>
+</section>
+
+
+{% endblock %}
